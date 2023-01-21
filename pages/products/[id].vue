@@ -11,6 +11,10 @@ definePageMeta({
 const { id } = useRoute().params
 const uri = 'https://fakestoreapi.com/products/' + id;
 const { data: product } = useFetch(uri, { key: id });
+
+// if (!product.value) {
+//     throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
+// }
 </script>
 
 <style scoped>
